@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block main %}
+<main role="main">
+  <div class="container">
+    <div class="theme-showcase">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron mt-4">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<p align="center"><a href="/">&lt;Home&gt;</a></p>
+{% endblock %}

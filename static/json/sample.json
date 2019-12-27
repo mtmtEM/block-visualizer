@@ -1,0 +1,39 @@
+{
+    "address": "1AXXXXXXXXXXXX",
+    "service": "AA",
+    "children": [
+        {
+            "address": "3AXXXXXXXXXXXX",
+            "service": "BB"
+        },
+        {
+            "address": "3BXXXXXXXXXXXX",
+            "service": "CC"
+        },
+        {
+            "address": "3CXXXXXXXXXXXX",
+            "service": "DD"
+        },
+        {
+            "address": "1AAXXXXXXXXXXX",
+            "service": "EE"
+        },
+        {
+            "address": "1BAXXXXXXXXXXX",
+            "children": [
+                {
+                    "address": "3AAXXXXXXXXXXX",
+                    "service": "AA"
+                },
+                {
+                    "address": "3BAXXXXXXXXXXX",
+                    "service": ""
+                },
+                {
+                    "address": "3CAXXXXXXXXXXX",
+                    "service": "EE"
+                }
+            ]
+        }
+    ]
+}

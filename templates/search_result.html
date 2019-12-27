@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block main %}
+  <h1>検索結果</h1>
+
+  <h2>{{ search_word }}</h2>
+  <div id="tx-treeViwe"></div>
+
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="/static/css/d3_tree.css">
+{% endblock %}
+
+{% block srcipt %}
+<script>var DATA_FILE_PATH = '/static/json/{{ search_word }}.json';</script>
+<script src="/static/js/d3_test.js"></script>
+{% endblock %}

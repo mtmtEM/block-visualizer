@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+  <h1>Block Visualizer</h1>
+
+  <h2>検索システム</h2>
+  <div class="explain">
+    <h4>基本機能について</h4>
+    <p>ビットコインのアドレスを入力し、検索を行うと送金先アドレスの可視化を行う</p>
+    <p>d3を利用したビットコインの送金先を検索するツール</p>
+  </div>
+
+  <h2>更新履歴</h2>
+  <div class="update">
+    <p>2019/12/27 v0.0.1 試作版の作成</p>
+  </div>
+
+{% endblock %}
+
+{% block style %}
+<style>
+  ul.service-list {
+    display: table;
+    width:100%;
+  }
+  ul.service-list > li:nth-child(2n+1) {
+      clear: both;
+  }
+  ul.service-list > li {
+      display: table-cell;
+      float: left;
+      width: 50%;
+  }
+</style>
+{% endblock %}
+{% block srcipt %}
+<script>
+  // 「戻る」ボタンでのキャッシュ無効
+  window.onbeforeunload = function() {}; // IE
+  window.onunload = function() {}; //IE以外
+</script>
+{% endblock %}

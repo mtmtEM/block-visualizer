@@ -1,0 +1,6 @@
+# pyenv files
+.python-version
+
+# data files
+static/json/*.json
+!sample.json

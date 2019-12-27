@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Block Visualizer</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/template.css" rel="stylesheet">
+    <!-- <link href="/static/css/main.css" rel="stylesheet"> -->
+    <link href="/static/docs/4.2/examples/starter-template/starter-template.css" rel="canonical">
+    <link rel="shortcut icon" href="/static/image/b_logo.ico">
+  </head>
+
+  <body class="container-fluid">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/about">Block Visualizer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/">Home</a>
+              <a class="dropdown-item" href="/node_info">Bitcoin Node</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block main %}
+    {% endblock %}
+
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/d3.min.js"></script>
+    {% block style %}
+    {% endblock %}
+    {% block srcipt %}
+    {% endblock %}
+    <script>
+    // navbarのサイズに合わせて画面をリサイズ
+    $(window).on('load resize', function(){
+      // navbarの高さを取得する
+      var height = $('.navbar').height();
+      // bodyのpaddingにnavbarの高さを設定する
+      $('body').css('padding-top',height);
+    });
+    </script>
+  </body>
+</html>

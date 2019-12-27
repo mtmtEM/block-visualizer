@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+  <h1>Bitcoin Block Visualizer</h1>
+
+  <h2>検索</h2>
+  <div class='search'>
+    <form class="form-inline" action="/d3_nodes" method="POST" id="submit_address">
+      <input type="text" class="form-control  mb-2 mr-sm-2" id="form" name="form-value" placeholder="Search for things like address, transaction, block" style="width:90%" required>
+      <button type="submit" class="btn btn-primary mb-2" > Search </button>
+    </form>
+  </div>
+
+  <h2>ビットコイン ノード分布</h2>
+
+  <font size="5"><a href="/node_info">Bitcoin Node Connection</a></font><br/>
+
+{% endblock %}
+
+{% block style %}
+<style>
+  ul.service-list {
+    display: table;
+    width:100%;
+  }
+  ul.service-list > li:nth-child(2n+1) {
+      clear: both;
+  }
+  ul.service-list > li {
+      display: table-cell;
+      float: left;
+      width: 50%;
+  }
+</style>
+{% endblock %}
+{% block srcipt %}
+<script>
+  // 「戻る」ボタンでのキャッシュ無効
+  window.onbeforeunload = function() {}; // IE
+  window.onunload = function() {}; //IE以外
+</script>
+{% endblock %}
